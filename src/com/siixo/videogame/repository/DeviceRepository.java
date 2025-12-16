@@ -113,6 +113,7 @@ public class DeviceRepository {
             ps.setString(1, device.getName());
             ps.setString(2, device.getType());
             ps.setString(3, device.getManufacturer());
+            ps.setInt(4, device.getId());
             int row = ps.executeUpdate();
             if (row < 1) {
                 System.out.println("Enregistrement impossible");
